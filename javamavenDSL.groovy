@@ -15,10 +15,10 @@ job('Java Maven APP DSL') {
       mavenInstallation('mavenjenkins')
       goals('test')
     }
-    shell {'''
-      echo "Entrega: Desplegando la aplicacion"
-      java -jar "/var/jenkins_home/workspace/Java Maven App DSL/target/my-app-1.0-SNAPSHOT.jar"
-    '''}
+    shell('''
+      echo "Entrega: Desplegando la aplicación" 
+      java -jar "/var/jenkins_home/workspace/Java Maven App DSL 2/target/my-app-1.0-SNAPSHOT.jar"
+    ''')  
   }
   publishers {
     archiveArtifact('target/*.jar')
