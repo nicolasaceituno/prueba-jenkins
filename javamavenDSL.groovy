@@ -24,4 +24,6 @@ job('Java Maven APP DSL')
       archiveJunit('target/surfire-reports/*.xml')
       mailer('nicolas.aceituno@gmail.com', true, true)
     }
+}
+
     
