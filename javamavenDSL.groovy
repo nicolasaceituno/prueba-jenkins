@@ -19,11 +19,11 @@ job('Java Maven APP DSL') {
       echo "Entrega: Desplegando la aplicacion"
       java -jar "/var/jenkins_home/workspace/Java Maven App DSL/target/my-app-1.0-SNAPSHOT.jar"
     '''}
-    publishers {
-      archiveArtifact('target/*.jar')
-      archiveJunit('target/surfire-reports/*.xml')
-      mailer('nicolas.aceituno@gmail.com', true, true)
-    }
+  }
+  publishers {
+    archiveArtifact('target/*.jar')
+    archiveJunit('target/surfire-reports/*.xml')
+    mailer('nicolas.aceituno@gmail.com', true, true)
   }
 }
 
