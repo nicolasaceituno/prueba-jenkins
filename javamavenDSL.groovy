@@ -21,7 +21,7 @@ job('Java Maven APP DSL') {
     ''')  
   }
   publishers {
-    archiveArtifact('target/*.jar')
+    archiveArtifacts('target/*.jar')
     archiveJunit('target/surfire-reports/*.xml')
     mailer('nicolas.aceituno@gmail.com', true, true)
   }
